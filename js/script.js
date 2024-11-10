@@ -8,28 +8,53 @@ const userKm = document.getElementById("km");
 // PRELEVIAMO I DATI DEL BIGLIETTO FINALE
 const nometicket = document.getElementById("nome-ticket");
 const cognometicket = document.getElementById("surname-ticket");
-const discountticket = document.getElementById("discount-ticket");
 const finalpriceticket = document.getElementById ("price-ticket");
+
+
 
 
 
 formElem.addEventListener("submit", function(event){
    
     event.preventDefault();
-// CONVERTO LA STRINGA IN NUMERO
+
+ 
    
     // prelevo tutti i valori
     const name = nameUser.value.trim();
     const surname = surnameUser.value.trim();
-    const userAge = userAge.value.trim();
-    const userKm = userKm.value.trim();
-
+    const age = userAge.value.trim();
+    const km = userKm.value.trim();
     // convertiamo le stringhe in numeri
+    const kmNum = parseInt(km);
+    const ageNum = parseInt(age);
  
+  
+ const prezzobase = (kmNum * 0.21);
+ const prezzofinale = prezzobase;
+ if (ageNum < 18) {
+    const sconto = (prezzobase / 100) * 20;
+    const prezzofinale = prezzobase - sconto;
+   
+     
+  } else if(ageNum > 65){ 
+    const sconto = (prezzobase / 100) * 40;
+    const prezzofinale = prezzobase - sconto;
+    
+      
+  } else{
+             const prezzofinale = prezzobase;  
+             
+  }
+  
+  
+
 
     nometicket.innerHTML = name;
     cognometicket.innerHTML = surname;
-    finalpriceticket.innerHTML = priceticket;
+    finalpriceticket.innerHTML = prezzofinale;
+    
+    
 })
 
 
@@ -37,16 +62,7 @@ formElem.addEventListener("submit", function(event){
 
 // CREO LA CONDIZIONE PER CALCOLARE LO SCONTO DEL BIGLIETTO
 
- const priceticket = (userKm * 0.21);
 
-// if (userAgenum < 18) {
-//     const discount = ((priceticket /100)* 20);
-//     const finalprice = priceticket - discountticket;
-    
-//  } else if(userAgenum > 65){
-//     const discountticket = ((priceticket /100)* 40);
-//     const priceticket = priceticket - discountticket;
-//  }
 
 
 
