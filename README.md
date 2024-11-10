@@ -25,6 +25,10 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 
  <!-- SVOLGIMENTO LOGICO -->
  1) creare gli imput di inserimento
+    -creiamo tutti gli input
+    -li portiamo su js
+    -li preleviamo in event
+    
 
  2) creare il calcolo di spesa con le variabili età - km - sconto
     (if)       20% se si ha meno di 18 anni

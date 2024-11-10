@@ -9,9 +9,53 @@
 <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-
+<body class="container">
+    <div class="raw">
+        <!-- COLONNA DATI DA INSERIRE -->
+         <form action="" id="user-form">
+        <div class="colDati">
+            <!-- INSERISCI NOME E COGNOME -->
+            <div>
+                <label for="Km">Inserisci Nome passeggiero</label>
+                <input type="text" name="name" id="name" autocomplete="off">
+             </div>
+             <div>
+                <label for="Km">Inserisci Cognome passeggiero</label>
+                <input type="text" name="surname" id="surname" autocomplete="off">
+             </div>
+              <!-- /INSERISCI NOME E COGNOME -->
+               <!-- INSERISCI ETà  -->
+               <div>
+                <label for="età">Inserisci età del passeggiero</label>
+                <input type="text" name="età" id="età" autocomplete="off">
+             </div>
+              <!-- /INSERISCI ETà  -->
+               <!-- INSERISCI KM DA PERCORRERE -->
+             <div>
+                <label for="km">Inserisci Km da percorrere</label>
+                <input type="text" name="km" id="km" autocomplete="off">
+             </div>
+                <!-- /INSERISCI KM DA PERCORRERE -->
+                
+                
+        </div>
+        <div>
+            <button type="submit">Conferma</button>
+        </div>
+    </div>
+    </form>
+    <!-- COLONNA RISULTATI FINALI -->
+        <div class="row">
+            <div class="colRisultato">
+                <div id="nome-ticket">Nome utente</div>
+                <div id="surname-ticket">Cognome utente</div>
+                <div id="price-ticket">Prezzo finale</div>
+            </div>
+        
+        </div>
     
+
+
     <!-- JAVASCRIPT -->
     <script src="./js/script.js"></script>
 </body>
