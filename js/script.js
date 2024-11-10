@@ -9,6 +9,7 @@ const userKm = document.getElementById("km");
 const nometicket = document.getElementById("nome-ticket");
 const cognometicket = document.getElementById("surname-ticket");
 const finalpriceticket = document.getElementById ("price-ticket");
+const schermataBiglietto = document.getElementById("biglietto");
 
 
 
@@ -46,13 +47,14 @@ formElem.addEventListener("submit", function(event){
              const prezzofinale = prezzobase;  
              
   }
+
   
   
 
-
+    schermataBiglietto.style.display = "block";
     nometicket.innerHTML = name;
     cognometicket.innerHTML = surname;
-    finalpriceticket.innerHTML = prezzofinale;
+    finalpriceticket.innerHTML = ` ${prezzofinale} euro`; 
     
     
 })

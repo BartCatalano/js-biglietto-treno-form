@@ -12,9 +12,15 @@ img {
 
 li {
     list-style: none;
-
+}
     /* UTILITY */
     .container {
         width: 80%;
         max-width: 1100px;
         margin: 0 auto;
+    }
+    .cardCompilativa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
